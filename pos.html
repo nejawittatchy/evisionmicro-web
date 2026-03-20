@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POS System - eVision Microsystems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar scrolled">
+    <div class="nav-container">
+      <a href="/index.html" class="logo">
+        <img src="/src/images/logo/edit-evision-finl-newp.png" alt="eVision Microsystems Logo" style="max-height: 48px; width: auto;">
+      </a>
+      <div class="nav-links">
+        <a href="/index.html#home">Home</a>
+        <a href="/index.html#about">About</a>
+        <a href="/index.html#products" style="color:var(--color-primary)">Products</a>
+        <a href="/team.html">Team</a>
+        <a href="/clients.html">Clients</a>
+        <a href="/index.html#careers">Careers</a>
+        <a href="/index.html#contact" class="btn-primary">Talk to Us</a>
+      </div>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 1.5rem;">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme"
+          style="background:transparent; border:none; cursor:pointer; color:var(--color-heading); display:flex; align-items:center;">
+          <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            width="22" height="22" style="display:none;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
+          </svg>
+          <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-links" id="mobile-links">
+      <a href="/index.html#home">Home</a>
+      <a href="/index.html#about">About</a>
+      <a href="/index.html#products">Products</a>
+      <a href="/team.html">Team</a>
+      <a href="/clients.html">Clients</a>
+      <a href="/index.html#careers">Careers</a>
+      <a href="/index.html#contact" class="btn-primary" style="margin-top:1rem; text-align:center;">Talk to Us</a>
+    </div>
+  </nav>
+
+  <main id="app" style="padding-top: 100px;">
+    <section class="section-padding" style="background-color: var(--color-bg);">
+      <div class="container">
+        <div class="section-header text-center" style="max-width: 900px; margin: 0 auto;">
+          <h2 class="section-title">Point of Sale <span class="highlight">(POS) System</span></h2>
+          <p class="section-subtitle" style="font-size: 1.25rem;">
+            Our intuitive Point of Sale (POS) system is crafted to refine retail operations by providing seamless transaction processing, inventory management, and real-time sales tracking. By reducing wait times and generating instant receipts, it significantly enhances the customer experience. The system easily integrates with other business tools to facilitate efficient reporting, analytics, and stock control, making it an ideal solution to boost sales and accuracy for both small shops and large enterprises.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--color-surface-light);">
+      <div class="container">
+        <h2 class="section-title text-center" style="margin-bottom:4rem;">Key Features & <span class="highlight">Capabilities</span></h2>
+        
+        <div class="products-grid">
+          
+          <div class="product-card">
+            <div class="product-icon"><i class="fa-solid fa-cash-register"></i></div>
+            <h3>All-in-One Solution</h3>
+            <p>Experience a unified platform for all your retail operations.</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Fast Billing Process</h3>
+            <p>Accelerate customer checkout times and receipt printing.</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+            <h3>Inventory Management</h3>
+            <p>Actively track your stock levels and monitor product movement.</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h3>Multi-Location Management</h3>
+            <p>Control and oversee operations across multiple stores from a single dashboard.</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon"><i class="fa-solid fa-crown"></i></div>
+            <h3>Customer Loyalty Tools</h3>
+            <p>Implement programs to reward and retain your most loyal customers.</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon"><i class="fa-solid fa-user-lock"></i></div>
+            <h3>User Role Control</h3>
+            <p>Safely manage staff access levels and system permissions.</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon"><i class="fa-solid fa-file-lines"></i></div>
+            <h3>Comprehensive Reports</h3>
+            <p>Generate in-depth analytics on daily sales and current inventory.</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon"><i class="fa-solid fa-wifi"></i></div>
+            <h3>Offline Functionality</h3>
+            <p>Continue working without interruptions even if the internet connection drops.</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+            <h3>Device Flexibility</h3>
+            <p>Run the POS seamlessly on any compatible smart device.</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon"><i class="fa-solid fa-headset"></i></div>
+            <h3>Local Support & Custom Features</h3>
+            <p>Benefit from local assistance to tailor features directly to your specific needs.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="https://wa.me/94701000800" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="/index.html" class="logo">
+          <img src="/src/images/logo/edit-evision-finl-newp.png" alt="eVision Microsystems Logo" style="max-height: 48px; width: auto;">
+        </a>
+        <p class="footer-desc">Leading Provider of Business Software Applications in Sri Lanka. Empowering enterprises
+          with ERP, SFA, POS, and HRIS solutions.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="/index.html#about">About Us</a>
+        <a href="/index.html#products">Products</a>
+        <a href="/team.html">Our Team</a>
+        <a href="/index.html#careers">Careers</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 2nd floor, Pan Asia Building, Galle Road, Panadura</p>
+        <p>📞 +94 382 222 655 / +94 701 000 800</p>
+        <p>✉️ info@evisionmicro.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 eVision Microsystems (Pvt) Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
