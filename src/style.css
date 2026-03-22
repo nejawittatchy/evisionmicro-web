@@ -953,12 +953,44 @@ a {
   font-size: 0.9rem;
 }
 
+/* Footer Social Icons */
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-surface-light);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 210, 255, 0.25);
+}
+
+.footer-social a.fb:hover  { border-color: #1877f2; color: #1877f2; box-shadow: 0 4px 12px rgba(24,119,242,0.25); }
+.footer-social a.li:hover  { border-color: #0a66c2; color: #0a66c2; box-shadow: 0 4px 12px rgba(10,102,194,0.25); }
+
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 }
+
 
 /* WhatsApp Floating Widget */
 .whatsapp-float {
