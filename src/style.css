@@ -1792,10 +1792,30 @@ a {
   font-size: 0.875rem;
 }
 
+/* Image-backed gallery tiles */
+.gl-img-inner {
+  min-height: 0 !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Lightbox full-photo display */
+.gl-lightbox-photo {
+  background: #000 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 @keyframes glFadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to   { opacity: 1; transform: scale(1); }
 }
+
 
 /* Gallery Responsive */
 @media (max-width: 900px) {
