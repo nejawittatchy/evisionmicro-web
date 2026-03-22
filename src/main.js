@@ -1,3 +1,29 @@
+import { siteConfig } from './site.config.js';
+
+// =====================================================
+//  Config-Driven Page Visibility
+//  Edit src/site.config.js to show/hide pages.
+// =====================================================
+(function applyPageVisibility() {
+  const pages = siteConfig.pages;
+  Object.keys(pages).forEach(pageKey => {
+    const page = pages[pageKey];
+    // Select nav links (desktop + mobile)
+    const navLinks = document.querySelectorAll(`[data-page-nav="${pageKey}"]`);
+    // Select footer links
+    const footerLinks = document.querySelectorAll(`[data-footer-page="${pageKey}"]`);
+    const allLinks = [...navLinks, ...footerLinks];
+
+    allLinks.forEach(link => {
+      if (!page.enabled) {
+        link.classList.add('page-hidden');
+      } else {
+        link.classList.remove('page-hidden');
+      }
+    });
+  });
+})();
+
 // Navbar Scroll Effect
 const navbar = document.getElementById('navbar');
 if (navbar) {

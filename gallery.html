@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - eVision Microsystems</title>
+  <meta name="description" content="Explore photos from eVision Microsystems — our office, team events, product launches, and more.">
+  <!-- Modern Tech Font: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="src/images/logo/edit-evision-finl-newp.png" alt="eVision Microsystems Logo" style="max-height: 48px; width: auto;">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#products">Products</a>
+        <a href="team.html">Team</a>
+        <a href="clients.html">Clients</a>
+        <a href="index.html#careers">Careers</a>
+        <a href="newsletter.html" data-page-nav="newsletter">Newsletter</a>
+        <a href="gallery.html" style="color:var(--color-primary)" data-page-nav="gallery">Gallery</a>
+        <a href="index.html#contact" class="btn-primary">Talk to Us</a>
+      </div>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 1.5rem;">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme"
+          style="background:transparent; border:none; cursor:pointer; color:var(--color-heading); display:flex; align-items:center;">
+          <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            width="22" height="22" style="display:none;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
+          </svg>
+          <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Links Container -->
+    <div class="mobile-links" id="mobile-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#products">Products</a>
+      <a href="team.html">Team</a>
+      <a href="clients.html">Clients</a>
+      <a href="index.html#careers">Careers</a>
+      <a href="newsletter.html" data-page-nav="newsletter">Newsletter</a>
+      <a href="gallery.html" data-page-nav="gallery">Gallery</a>
+      <a href="index.html#contact" class="btn-primary" style="margin-top:1rem; text-align:center;">Talk to Us</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="app" style="padding-top: 100px;">
+
+    <!-- Page Hero -->
+    <section class="section-padding" style="background-color: var(--color-bg); padding-bottom: 3rem;">
+      <div class="container text-center">
+        <div class="nl-hero-badge">
+          <i class="fas fa-images"></i>
+          <span>Visual Showcase</span>
+        </div>
+        <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 1.25rem;">
+          Our <span class="highlight">Gallery</span>
+        </h1>
+        <p class="section-subtitle">
+          A glimpse into our world — team events, product launches, office life, and the people who make it all happen.
+        </p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-padding" style="background-color: var(--color-bg); padding-top: 0;">
+      <div class="container">
+
+        <!-- Filter Tabs -->
+        <div class="gl-filter-tabs" id="gallery-filters">
+          <button class="gl-filter-btn active" data-filter="all">All Photos</button>
+          <button class="gl-filter-btn" data-filter="office">Office</button>
+          <button class="gl-filter-btn" data-filter="events">Events</button>
+          <button class="gl-filter-btn" data-filter="products">Products</button>
+          <button class="gl-filter-btn" data-filter="team">Team</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gl-grid" id="gallery-grid">
+
+          <!-- Office Photos -->
+          <div class="gl-item gl-wide" data-category="office">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #0a192f 0%, #112240 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-building" style="font-size: 4rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                <h4>Our Panadura HQ</h4>
+                <p>2nd Floor, Pan Asia Building</p>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>Our Panadura HQ</h4>
+                <p><i class="fas fa-tag"></i> Office</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gl-item" data-category="office">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #112240 0%, #1a3050 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-desktop" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 0.75rem;"></i>
+                <h4>Dev Floor</h4>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>Development Floor</h4>
+                <p><i class="fas fa-tag"></i> Office</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gl-item" data-category="office">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #051525 0%, #0a192f 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-coffee" style="font-size: 3rem; color: #00d2ff; margin-bottom: 0.75rem;"></i>
+                <h4>Lounge Area</h4>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>Team Lounge</h4>
+                <p><i class="fas fa-tag"></i> Office</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Events Photos -->
+          <div class="gl-item" data-category="events">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #1a0533 0%, #2d0a5a 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-trophy" style="font-size: 3rem; color: #c084fc; margin-bottom: 0.75rem;"></i>
+                <h4>Annual Awards</h4>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>Annual Awards Night</h4>
+                <p><i class="fas fa-tag"></i> Events</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gl-item gl-tall" data-category="events">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #0f1a2e 0%, #1e3a5f 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-birthday-cake" style="font-size: 3rem; color: #f59e0b; margin-bottom: 0.75rem;"></i>
+                <h4>10 Year Celebration</h4>
+                <p>A decade of innovation</p>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>10 Year Anniversary</h4>
+                <p><i class="fas fa-tag"></i> Events</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gl-item" data-category="events">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #0f2010 0%, #1a3a1c 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-handshake" style="font-size: 3rem; color: #34d399; margin-bottom: 0.75rem;"></i>
+                <h4>Client Summit</h4>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>Annual Client Summit</h4>
+                <p><i class="fas fa-tag"></i> Events</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gl-item" data-category="events">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #1a1005 0%, #3a2510 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-futbol" style="font-size: 3rem; color: #f97316; margin-bottom: 0.75rem;"></i>
+                <h4>Sports Day 2025</h4>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>Annual Sports Day</h4>
+                <p><i class="fas fa-tag"></i> Events</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Products Photos -->
+          <div class="gl-item gl-wide" data-category="products">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #001a2e 0%, #003355 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-mobile-alt" style="font-size: 4rem; color: #00d2ff; margin-bottom: 1rem;"></i>
+                <h4>SFA Mobile App 3.0</h4>
+                <p>Our flagship field sales app</p>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>SFA Mobile App 3.0 Launch</h4>
+                <p><i class="fas fa-tag"></i> Products</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gl-item" data-category="products">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #0f1a10 0%, #1a3020 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-server" style="font-size: 3rem; color: #34d399; margin-bottom: 0.75rem;"></i>
+                <h4>ERP Dashboard</h4>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>ERP Dashboard Showcase</h4>
+                <p><i class="fas fa-tag"></i> Products</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gl-item" data-category="products">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #1a0a0f 0%, #2d1020 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-cash-register" style="font-size: 3rem; color: #f472b6; margin-bottom: 0.75rem;"></i>
+                <h4>POS Terminal</h4>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>POS Terminal Display</h4>
+                <p><i class="fas fa-tag"></i> Products</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Photos -->
+          <div class="gl-item" data-category="team">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #0a102a 0%, #14205f 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-users" style="font-size: 3rem; color: #818cf8; margin-bottom: 0.75rem;"></i>
+                <h4>Engineering Team</h4>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>Engineering Team</h4>
+                <p><i class="fas fa-tag"></i> Team</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gl-item gl-tall" data-category="team">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #0a1a10 0%, #1a3a25 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-user-tie" style="font-size: 3rem; color: #4ade80; margin-bottom: 0.75rem;"></i>
+                <h4>Management</h4>
+                <p>Leadership at eVision</p>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>Leadership Team</h4>
+                <p><i class="fas fa-tag"></i> Team</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gl-item" data-category="team">
+            <div class="gl-inner" style="background: linear-gradient(135deg, #1a0a05 0%, #3a2015 100%);">
+              <div class="gl-placeholder-content">
+                <i class="fas fa-chart-bar" style="font-size: 3rem; color: #fb923c; margin-bottom: 0.75rem;"></i>
+                <h4>Sales & Marketing</h4>
+              </div>
+            </div>
+            <div class="gl-overlay">
+              <div class="gl-overlay-content">
+                <i class="fas fa-expand-alt gl-zoom-icon"></i>
+                <h4>Sales & Marketing Team</h4>
+                <p><i class="fas fa-tag"></i> Team</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Load More -->
+        <div class="text-center" style="margin-top: 3rem;">
+          <button class="btn-secondary" id="load-more-btn" onclick="this.textContent='All photos loaded ✓'; this.disabled=true; this.style.opacity='0.5';">
+            <i class="fas fa-plus" style="margin-right: 0.5rem;"></i>Load More Photos
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="gl-lightbox" id="lightbox">
+    <button class="gl-lightbox-close" id="lightbox-close" aria-label="Close lightbox">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="gl-lightbox-nav gl-prev" id="lightbox-prev" aria-label="Previous">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <div class="gl-lightbox-content" id="lightbox-content"></div>
+    <button class="gl-lightbox-nav gl-next" id="lightbox-next" aria-label="Next">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="gl-lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/94701000800" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="src/images/logo/edit-evision-finl-newp.png" alt="eVision Microsystems Logo" style="max-height: 48px; width: auto;">
+        </a>
+        <p class="footer-desc">Leading Provider of Business Software Applications in Sri Lanka. Empowering enterprises with ERP, SFA, POS, and HRIS solutions.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#products">Products</a>
+        <a href="team.html">Our Team</a>
+        <a href="index.html#careers">Careers</a>
+        <a href="gallery.html" data-footer-page="gallery">Gallery</a>
+        <a href="newsletter.html" data-footer-page="newsletter">Newsletter</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 2nd floor, Pan Asia Building, Galle Road, Panadura</p>
+        <p>📞 +94 382 222 655 / +94 701 000 800</p>
+        <p>✉️ info@evisionmicro.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 eVision Microsystems (Pvt) Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+  <script>
+    // Gallery Filter Logic
+    const filterBtns = document.querySelectorAll('.gl-filter-btn');
+    const galleryItems = document.querySelectorAll('.gl-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        galleryItems.forEach(item => {
+          const cat = item.getAttribute('data-category');
+          if (filter === 'all' || cat === filter) {
+            item.style.display = '';
+            item.style.animation = 'glFadeIn 0.4s ease forwards';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Lightbox Logic
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.getElementById('lightbox-content');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    let currentItems = [];
+    let currentIndex = 0;
+
+    function getVisibleItems() {
+      return Array.from(galleryItems).filter(el => el.style.display !== 'none');
+    }
+
+    function openLightbox(index) {
+      currentItems = getVisibleItems();
+      currentIndex = index;
+      showLightboxItem();
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function showLightboxItem() {
+      const item = currentItems[currentIndex];
+      const inner = item.querySelector('.gl-inner');
+      const title = item.querySelector('.gl-overlay h4')?.textContent || '';
+      const category = item.querySelector('.gl-overlay p')?.textContent || '';
+      lightboxContent.innerHTML = `<div class="gl-lightbox-visual" style="${inner.style.cssText || ''}">${inner.innerHTML}</div>`;
+      lightboxCaption.innerHTML = `<h3>${title}</h3><p>${category}</p>`;
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    galleryItems.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        const visible = getVisibleItems();
+        const visIndex = visible.indexOf(item);
+        openLightbox(visIndex);
+      });
+    });
+
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + currentItems.length) % currentItems.length;
+      showLightboxItem();
+    });
+    document.getElementById('lightbox-next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % currentItems.length;
+      showLightboxItem();
+    });
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + currentItems.length) % currentItems.length; showLightboxItem(); }
+      if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % currentItems.length; showLightboxItem(); }
+    });
+  </script>
+</body>
+
+</html>

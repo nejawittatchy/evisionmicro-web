@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newsletter - eVision Microsystems</title>
+  <meta name="description" content="Stay up to date with the latest news, product updates, and industry insights from eVision Microsystems.">
+  <!-- Modern Tech Font: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="src/images/logo/edit-evision-finl-newp.png" alt="eVision Microsystems Logo" style="max-height: 48px; width: auto;">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#products">Products</a>
+        <a href="team.html">Team</a>
+        <a href="clients.html">Clients</a>
+        <a href="index.html#careers">Careers</a>
+        <a href="newsletter.html" style="color:var(--color-primary)" data-page-nav="newsletter">Newsletter</a>
+        <a href="gallery.html" data-page-nav="gallery">Gallery</a>
+        <a href="index.html#contact" class="btn-primary">Talk to Us</a>
+      </div>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 1.5rem;">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme"
+          style="background:transparent; border:none; cursor:pointer; color:var(--color-heading); display:flex; align-items:center;">
+          <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            width="22" height="22" style="display:none;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
+          </svg>
+          <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Links Container -->
+    <div class="mobile-links" id="mobile-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#products">Products</a>
+      <a href="team.html">Team</a>
+      <a href="clients.html">Clients</a>
+      <a href="index.html#careers">Careers</a>
+      <a href="newsletter.html" data-page-nav="newsletter">Newsletter</a>
+      <a href="gallery.html" data-page-nav="gallery">Gallery</a>
+      <a href="index.html#contact" class="btn-primary" style="margin-top:1rem; text-align:center;">Talk to Us</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="app" style="padding-top: 100px;">
+
+    <!-- Page Hero -->
+    <section class="nl-hero section-padding" style="background-color: var(--color-bg); padding-bottom: 3rem;">
+      <div class="container text-center">
+        <div class="nl-hero-badge">
+          <i class="fas fa-envelope-open-text"></i>
+          <span>eVision Insights</span>
+        </div>
+        <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 1.25rem;">
+          Stay <span class="highlight">Informed</span>
+        </h1>
+        <p class="section-subtitle">
+          The latest product updates, industry insights, and company news — delivered straight from eVision Microsystems.
+        </p>
+      </div>
+    </section>
+
+    <!-- Subscribe Strip -->
+    <section class="nl-subscribe-strip">
+      <div class="container">
+        <div class="nl-subscribe-card">
+          <div class="nl-subscribe-text">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates delivered to your inbox. No spam, ever.</p>
+          </div>
+          <form class="nl-subscribe-form" onsubmit="handleSubscribe(event)">
+            <div class="nl-form-row">
+              <input type="text" id="sub-name" placeholder="Your Name" required>
+              <input type="email" id="sub-email" placeholder="Your Email Address" required>
+              <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                Subscribe
+              </button>
+            </div>
+          </form>
+          <div id="subscribe-success" class="nl-success-msg" style="display:none;">
+            <i class="fas fa-check-circle"></i>
+            <span>Thank you for subscribing! You'll hear from us soon.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="section-padding" style="background-color: var(--color-bg);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Latest <span class="highlight">Updates</span></h2>
+          <p class="section-subtitle" style="margin: 0;">
+            Product highlights, company announcements, and technology insights.
+          </p>
+        </div>
+
+        <!-- Featured (large) card -->
+        <div class="nl-featured-card">
+          <div class="nl-featured-badge"><i class="fas fa-star"></i> Featured</div>
+          <div class="nl-featured-grid">
+            <div class="nl-featured-visual">
+              <div class="nl-featured-icon-wrap">
+                <i class="fas fa-rocket"></i>
+              </div>
+            </div>
+            <div class="nl-featured-body">
+              <div class="nl-meta">
+                <span class="nl-tag nl-tag-product">Product Update</span>
+                <span class="nl-date"><i class="far fa-calendar"></i> March 2026</span>
+              </div>
+              <h3>SFA Mobile App 3.0 — The Biggest Update Yet</h3>
+              <p>
+                We've completely reimagined the eVision SFA mobile experience. Version 3.0 brings a redesigned dashboard, real-time GPS route optimisation, offline-first data sync, and powerful AI-driven sales forecasting tools — all built for field teams on the move.
+              </p>
+              <div class="nl-highlights">
+                <div class="nl-highlight-item"><i class="fas fa-check"></i> Offline-first sync engine</div>
+                <div class="nl-highlight-item"><i class="fas fa-check"></i> AI sales forecasting</div>
+                <div class="nl-highlight-item"><i class="fas fa-check"></i> Real-time GPS routing</div>
+                <div class="nl-highlight-item"><i class="fas fa-check"></i> Redesigned UI/UX</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article Cards Grid -->
+        <div class="nl-articles-grid">
+
+          <article class="nl-article-card">
+            <div class="nl-article-icon nl-icon-blue">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="nl-article-body">
+              <div class="nl-meta">
+                <span class="nl-tag nl-tag-tech">Technology</span>
+                <span class="nl-date"><i class="far fa-calendar"></i> Feb 2026</span>
+              </div>
+              <h4>ERP Cloud Migration: What You Need to Know</h4>
+              <p>Our ERP platform now supports seamless cloud deployment with zero downtime migration, granular role-based access, and real-time dashboards accessible from anywhere.</p>
+            </div>
+            <div class="nl-article-footer">
+              <span class="nl-read-more">Read More <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <article class="nl-article-card">
+            <div class="nl-article-icon nl-icon-green">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="nl-article-body">
+              <div class="nl-meta">
+                <span class="nl-tag nl-tag-company">Company</span>
+                <span class="nl-date"><i class="far fa-calendar"></i> Jan 2026</span>
+              </div>
+              <h4>eVision Grows to 40+ Professionals</h4>
+              <p>We're proud to have expanded our team to over 40 talented professionals across engineering, sales, and customer success — all dedicated to empowering Sri Lankan enterprises.</p>
+            </div>
+            <div class="nl-article-footer">
+              <span class="nl-read-more">Read More <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <article class="nl-article-card">
+            <div class="nl-article-icon nl-icon-purple">
+              <i class="fas fa-cash-register"></i>
+            </div>
+            <div class="nl-article-body">
+              <div class="nl-meta">
+                <span class="nl-tag nl-tag-product">Product Update</span>
+                <span class="nl-date"><i class="far fa-calendar"></i> Dec 2025</span>
+              </div>
+              <h4>POS System: Multi-Outlet Support Launched</h4>
+              <p>The latest POS release enables centralized inventory management and consolidated reporting across multiple retail outlets — a game-changer for chains and franchise operators.</p>
+            </div>
+            <div class="nl-article-footer">
+              <span class="nl-read-more">Read More <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <article class="nl-article-card">
+            <div class="nl-article-icon nl-icon-orange">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="nl-article-body">
+              <div class="nl-meta">
+                <span class="nl-tag nl-tag-tech">Technology</span>
+                <span class="nl-date"><i class="far fa-calendar"></i> Nov 2025</span>
+              </div>
+              <h4>ISO 27001 Compliance: Data Security Upgrade</h4>
+              <p>eVision Microsystems has completed a comprehensive security upgrade across all platforms, aligning with ISO 27001 standards for enterprise-grade data security and privacy.</p>
+            </div>
+            <div class="nl-article-footer">
+              <span class="nl-read-more">Read More <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <article class="nl-article-card">
+            <div class="nl-article-icon nl-icon-teal">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="nl-article-body">
+              <div class="nl-meta">
+                <span class="nl-tag nl-tag-industry">Industry</span>
+                <span class="nl-date"><i class="far fa-calendar"></i> Oct 2025</span>
+              </div>
+              <h4>HRIS Analytics: Smarter HR Decision-Making</h4>
+              <p>New analytics dashboards in our HRIS platform give HR managers real-time insight into workforce trends, leave patterns, and payroll projections — right from their browser.</p>
+            </div>
+            <div class="nl-article-footer">
+              <span class="nl-read-more">Read More <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <article class="nl-article-card">
+            <div class="nl-article-icon nl-icon-pink">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="nl-article-body">
+              <div class="nl-meta">
+                <span class="nl-tag nl-tag-company">Company</span>
+                <span class="nl-date"><i class="far fa-calendar"></i> Sep 2025</span>
+              </div>
+              <h4>New Partnership with Leading FMCG Distributor</h4>
+              <p>We are excited to announce a strategic partnership to deploy our SFA and ERP solutions across a network of 500+ field representatives throughout Sri Lanka.</p>
+            </div>
+            <div class="nl-article-footer">
+              <span class="nl-read-more">Read More <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Archive Section -->
+    <section class="section-padding" style="background-color: var(--color-surface-light);">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Newsletter <span class="highlight">Archive</span></h2>
+          <p class="section-subtitle">Browse our past issues and catch up on what you missed.</p>
+        </div>
+        <div class="nl-archive-list">
+          <a href="#" class="nl-archive-item">
+            <div class="nl-archive-left">
+              <span class="nl-archive-icon"><i class="fas fa-file-alt"></i></span>
+              <div>
+                <h4>Q1 2026 Edition</h4>
+                <p>SFA 3.0 launch, cloud ERP milestone, team expansion & more.</p>
+              </div>
+            </div>
+            <div class="nl-archive-right">
+              <span class="nl-archive-date">March 2026</span>
+              <span class="nl-archive-download"><i class="fas fa-download"></i></span>
+            </div>
+          </a>
+          <a href="#" class="nl-archive-item">
+            <div class="nl-archive-left">
+              <span class="nl-archive-icon"><i class="fas fa-file-alt"></i></span>
+              <div>
+                <h4>Q4 2025 Edition</h4>
+                <p>POS multi-outlet launch, ISO 27001, partnership announcements.</p>
+              </div>
+            </div>
+            <div class="nl-archive-right">
+              <span class="nl-archive-date">December 2025</span>
+              <span class="nl-archive-download"><i class="fas fa-download"></i></span>
+            </div>
+          </a>
+          <a href="#" class="nl-archive-item">
+            <div class="nl-archive-left">
+              <span class="nl-archive-icon"><i class="fas fa-file-alt"></i></span>
+              <div>
+                <h4>Q3 2025 Edition</h4>
+                <p>HRIS analytics upgrade, new client onboardings, office events.</p>
+              </div>
+            </div>
+            <div class="nl-archive-right">
+              <span class="nl-archive-date">September 2025</span>
+              <span class="nl-archive-download"><i class="fas fa-download"></i></span>
+            </div>
+          </a>
+          <a href="#" class="nl-archive-item">
+            <div class="nl-archive-left">
+              <span class="nl-archive-icon"><i class="fas fa-file-alt"></i></span>
+              <div>
+                <h4>Q2 2025 Edition</h4>
+                <p>Summer product releases, team growth, and Sri Lanka tech recap.</p>
+              </div>
+            </div>
+            <div class="nl-archive-right">
+              <span class="nl-archive-date">June 2025</span>
+              <span class="nl-archive-download"><i class="fas fa-download"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/94701000800" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="src/images/logo/edit-evision-finl-newp.png" alt="eVision Microsystems Logo" style="max-height: 48px; width: auto;">
+        </a>
+        <p class="footer-desc">Leading Provider of Business Software Applications in Sri Lanka. Empowering enterprises with ERP, SFA, POS, and HRIS solutions.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#products">Products</a>
+        <a href="team.html">Our Team</a>
+        <a href="index.html#careers">Careers</a>
+        <a href="gallery.html" data-footer-page="gallery">Gallery</a>
+        <a href="newsletter.html" data-footer-page="newsletter">Newsletter</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 2nd floor, Pan Asia Building, Galle Road, Panadura</p>
+        <p>📞 +94 382 222 655 / +94 701 000 800</p>
+        <p>✉️ info@evisionmicro.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 eVision Microsystems (Pvt) Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+  <script>
+    function handleSubscribe(e) {
+      e.preventDefault();
+      document.getElementById('subscribe-success').style.display = 'flex';
+      e.target.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
