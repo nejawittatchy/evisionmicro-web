@@ -1832,6 +1832,14 @@ a {
   background-repeat: no-repeat !important;
 }
 
+/* Future-proof: direct img tag support inside .gl-inner */
+.gl-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Lightbox full-photo display */
 .gl-lightbox-photo {
   background: #000 !important;
