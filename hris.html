@@ -8,7 +8,8 @@
   <title>HRIS System - eVision Microsystems</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="src/style.css">
 </head>
@@ -18,7 +19,8 @@
   <nav id="navbar" class="navbar scrolled">
     <div class="nav-container">
       <a href="index.html" class="logo">
-        <img src="src/images/logo/edit-evision-finl-newp.png" alt="eVision Microsystems Logo" style="max-height: 48px; width: auto;">
+        <img src="src/images/logo/edit-evision-finl-newp.png" alt="eVision Microsystems Logo"
+          style="max-height: 48px; width: auto;">
       </a>
       <div class="nav-links">
         <a href="index.html#home">Home</a>
@@ -61,107 +63,268 @@
   </nav>
 
   <main id="app" style="padding-top: 100px;">
-    <section class="section-padding" style="background-color: var(--color-bg);">
-      <div class="container">
-        <div class="section-header text-center" style="max-width: 900px; margin: 0 auto;">
-          <h2 class="section-title">Human Resource Information System <span class="highlight">(HRIS)</span></h2>
-          <p class="section-subtitle" style="font-size: 1.25rem;">
-            The eVision HRIS system delivers complete visibility and authority over your entire human resource management workflow. Developed through extensive research and real-world application, this platform guarantees seamless HR operations from recruitment to retirement.
-          </p>
+
+    <!-- Hero Section -->
+    <section class="section-padding"
+      style="background: radial-gradient(circle at 100% 100%, rgba(0, 210, 255, 0.05) 0%, var(--color-bg) 50%);">
+      <div class="container text-center">
+        <div class="nl-hero-badge" style="margin-bottom: 2rem;">
+          <i class="fas fa-users-gear"></i>
+          <span>Modern Workforce Management</span>
+        </div>
+        <h1 class="hero-title"
+          style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+          Elevate Your Business with <span class="highlight">eVision HRIS</span>
+        </h1>
+        <p class="section-subtitle"
+          style="font-size: 1.4rem; color: var(--color-text-muted); max-width: 800px; margin-bottom: 3rem;">
+          "Transform your HR operations with eVision Microsystems HRIS – the smarter way to manage your workforce"
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Request a Demo</a>
+          <a href="#modules" class="btn-secondary">Explore Modules</a>
         </div>
       </div>
     </section>
 
-    <section class="section-padding" style="background-color: var(--color-surface-light);">
+    <!-- Intro Section -->
+    <section class="section-padding" style="background-color: var(--color-bg);">
       <div class="container">
-        <h2 class="section-title text-center" style="margin-bottom:4rem;">Key Modules & <span class="highlight">Capabilities</span></h2>
-        
+        <div class="hris-intro-grid">
+          <div class="hris-intro-content">
+            <h2 class="section-title">Who We <span class="highlight">Are?</span></h2>
+            <p>
+              eVision Microsystems is a leading software development company specializing in ERP, SFA, HRIS, and POS
+              solutions. We create smart, efficient, and scalable software to help businesses streamline operations,
+              boost productivity, and drive growth. With a commitment to innovation and customer satisfaction, we
+              deliver technology that transforms the way businesses work. Let’s build the future together.
+            </p>
+            <h3>eVision HRIS System</h3>
+            <p>
+              Our Human Resource Information System (HRIS) streamlines HR processes, empowering businesses to manage
+              employee data, payroll, recruitment, and performance in one integrated platform. With features like
+              automated attendance tracking, seamless payroll management, and real-time reporting, our HRIS reduces
+              administrative workload and enhances workforce efficiency.
+            </p>
+          </div>
+          <div class="dashboard-slot" style="border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.3);">
+            <img src="src/images/hris/Picture2.png" alt="eVision HRIS Dashboard Main Preview">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="modules" class="section-padding" style="background-color: var(--color-surface-light);">
+      <div class="container">
+        <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 5rem;">
+          <h2 class="section-title">Comprehensive <span class="highlight">HR Modules</span></h2>
+          <p class="section-subtitle">
+            Our HRIS helps HR teams make informed decisions, improve compliance, and boost employee satisfaction using
+            these powerful integrated modules.
+          </p>
+        </div>
+
         <div class="products-grid">
-          
+
+          <!-- Module 1 -->
           <div class="product-card">
             <div class="product-icon"><i class="fa-solid fa-id-badge"></i></div>
             <h3>Employee Information Management</h3>
-            <p>Securely store all employee records and assigned asset details.</p>
+            <p>Securely store all employee records and assigned asset details in a centralized database.</p>
+            <ul class="module-features-list">
+              <li>Organization structure & Charts</li>
+              <li>Employee Profile Management
+                <ul class="sub-features-list">
+                  <li>Personal info, Photograph, ID docs</li>
+                  <li>Work, Contract, & Contact details</li>
+                  <li>Qualification, Expertise, & History</li>
+                </ul>
+              </li>
+              <li>Assets tracking (phones, laptops, etc.)</li>
+              <li>Quick Search & Criteria filtering</li>
+              <li>Expiring contract notifications</li>
+            </ul>
           </div>
 
+          <!-- Module 2 -->
           <div class="product-card">
             <div class="product-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
             <h3>Employee Lifecycle Management</h3>
-            <p>Keep track of staff promotions, transfers, and organizational exits.</p>
+            <p>Track journeys from onboarding to retirement with full history and automated workflows.</p>
+            <ul class="module-features-list">
+              <li>Manage Promotions, Demotions, Increments</li>
+              <li>Transfers & Terminations</li>
+              <li>Resignations & Retirements</li>
+              <li>User-defined events support</li>
+              <li>Generate Letters & Attach Docs</li>
+              <li>Full Audit trail & Approval processes</li>
+            </ul>
           </div>
 
+          <!-- Module 3 -->
           <div class="product-card">
             <div class="product-icon"><i class="fa-solid fa-clock"></i></div>
             <h3>Time Attendance</h3>
-            <p>Accurately record employee shifts, manage leaves, and track time-related penalties.</p>
+            <p>Interface with biometric hardware for precise and automated time tracking.</p>
+            <ul class="module-features-list">
+              <li>RFID/Fingerprint/Face Recognition support</li>
+              <li>Shift & Roster management</li>
+              <li>Regular vs Flexi-hours</li>
+              <li>OT limits and Overtime Authorization</li>
+              <li>Leave Encashment & Lieu Leaves</li>
+              <li>Late attendance penalties & Allowances</li>
+            </ul>
           </div>
 
+          <!-- Module 4 -->
           <div class="product-card">
             <div class="product-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
             <h3>Payroll</h3>
-            <p>Seamlessly process employee salaries, handle deductions, and generate detailed payroll reports.</p>
+            <p>Handle complex processing for multiple staff categories with automatic statutory compliance.</p>
+            <ul class="module-features-list">
+              <li>Staff, Laborer, Executive, & Director payroll</li>
+              <li>Attendance-based payment rules</li>
+              <li>Loan recording & Installments</li>
+              <li>Advance payments & Deductions</li>
+              <li>Electronic Bank File generation</li>
+              <li>Statutory Reports (EPF, ETF, PAYE, Tax)</li>
+            </ul>
           </div>
 
+          <!-- Module 5 -->
           <div class="product-card">
             <div class="product-icon"><i class="fa-solid fa-ranking-star"></i></div>
             <h3>Performance Management</h3>
-            <p>Conduct employee appraisals, track overarching goals, and assign Key Performance Indicators (KPIs).</p>
+            <p>Empower employees with transparent goal setting and continuous feedback.</p>
+            <ul class="module-features-list">
+              <li>KRA/KPI & Balanced Scorecard methods</li>
+              <li>360 evaluation tools</li>
+              <li>Auto-reminders for reviews</li>
+              <li>Transparent PMS workflows</li>
+              <li>Skill gap identification & training prompts</li>
+              <li>Aggregate performance macro views</li>
+            </ul>
           </div>
 
+          <!-- Module 6 -->
           <div class="product-card">
             <div class="product-icon"><i class="fa-solid fa-graduation-cap"></i></div>
             <h3>Training and Development</h3>
-            <p>Systematically plan and oversee employee training programs.</p>
+            <p>Nurture effective teams by integrating performance needs with training calendars.</p>
+            <ul class="module-features-list">
+              <li>Training Needs Assessment integration</li>
+              <li>Centralized Training Database & Calendar</li>
+              <li>Self-service training requests</li>
+              <li>Budgeting & Impact analysis</li>
+              <li>Feedback loops for Trainees & Trainers</li>
+              <li>Employer brand & loyalty building</li>
+            </ul>
           </div>
 
+          <!-- Module 7 -->
           <div class="product-card">
             <div class="product-icon"><i class="fa-solid fa-user-pen"></i></div>
             <h3>Employee Self Service</h3>
-            <p>Empower staff to self-manage their profiles, request leave, and submit internal requests.</p>
+            <p>A centralized portal for staff to manage their work life independently.</p>
+            <ul class="module-features-list">
+              <li>Profile & Contact updates</li>
+              <li>Company Calendar & FAQs</li>
+              <li>Leave & Attendance requests</li>
+              <li>Stationery & Document requests</li>
+              <li>Promotion/Transfer applications</li>
+              <li>Corporate news & notifications</li>
+            </ul>
           </div>
 
+          <!-- Module 8 -->
           <div class="product-card">
             <div class="product-icon"><i class="fa-solid fa-chart-pie"></i></div>
-            <h3>Business Intelligence & Reporting</h3>
-            <p>Utilize custom HR dashboards and detailed analytical reports for workforce insights.</p>
+            <h3>BI & Analytical Reporting</h3>
+            <p>Gain deep insights through a powerful drag-and-drop reporting interface.</p>
+            <ul class="module-features-list">
+              <li>Comprehensive Standard Reports</li>
+              <li>User-designed Custom Reports</li>
+              <li>Drag-and-Drop simple UI</li>
+              <li>Variation analysis over time</li>
+              <li>Competency & Performance matrices</li>
+              <li>Multi-dimensional comparisons</li>
+            </ul>
           </div>
 
         </div>
       </div>
     </section>
+
+    <!-- Dashboard Showcase Section -->
+    <section class="section-padding" style="background-color: var(--color-bg);">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">HRIS <span class="highlight">System Previews</span></h2>
+          <p class="section-subtitle">Glimpse into our sleek, high-performing user interface designed for modern HR
+            teams.</p>
+        </div>
+
+        <div class="hris-floating-showcase">
+          <div class="floating-card f-card-1">
+            <img src="src/images/hris/Picture1.png" alt="Main HRIS Dashboard">
+            <div class="f-label">Primary Overview - Login</div>
+          </div>
+          <div class="floating-card f-card-2">
+            <img src="src/images/hris/Picture2.png" alt="Employee Lifecycle View">
+            <div class="f-label">Employee Dashboard</div>
+          </div>
+          <div class="floating-card f-card-3">
+            <img src="src/images/hris/Picture3.png" alt="Payroll & Reporting">
+            <div class="f-label">Payroll & Statutory Reporting</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <a href="https://wa.me/94701000800" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="container footer-content">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-          <img src="src/images/logo/edit-evision-finl-newp.png" alt="eVision Microsystems Logo" style="max-height: 48px; width: auto;">
+          <img src="src/images/logo/edit-evision-finl-newp.png" alt="eVision Microsystems Logo"
+            style="max-height: 48px; width: auto;">
         </a>
         <p class="footer-desc">Leading Provider of Business Software Applications in Sri Lanka. Empowering enterprises
           with ERP, SFA, POS, and HRIS solutions.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/EVisionM/" target="_blank" rel="noopener" class="fb" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://lk.linkedin.com/company/evisionmicro" target="_blank" rel="noopener" class="li"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
       </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a href="index.html#about">About Us</a>
-        <a href="index.html#products">Products</a>
-        <a href="team.html">Our Team</a>
-        <a href="index.html#careers">Careers</a>
+      <div class="footer-links" style="display: block;">
+        <h4>Contact Us</h4>
+        <p style="margin-bottom: 1rem; color: var(--color-text-muted);">📍 2nd floor, Pan Asia building, Panadura, Sri
+          Lanka</p>
+        <p style="margin-bottom: 1rem; color: var(--color-text-muted);">📞 038 2222655 / 070 1000800</p>
+        <p style="margin-bottom: 1rem; color: var(--color-text-muted);">✉️ info@evisionmicro.com</p>
       </div>
       <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p>📍 2nd floor, Pan Asia Building, Galle Road, Panadura</p>
-        <p>📞 +94 382 222 655 / +94 701 000 800</p>
-        <p>✉️ info@evisionmicro.com</p>
+        <h4>Stay Connected</h4>
+        <p class="footer-desc">Get the latest updates and newsletters from eVision.</p>
+        <a href="newsletter.html" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Subscribe Now</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 eVision Microsystems (Pvt) Ltd. All Rights Reserved.</p>
     </div>
   </footer>
+
 
   <script type="module" src="src/main.js"></script>
 </body>
