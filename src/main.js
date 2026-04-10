@@ -1,5 +1,10 @@
 import { siteConfig } from './site.config.js';
 
+console.log(
+  "%c Built with ❤️ by Neja Wittatchy ", 
+  "background: #222; color: #bada55; font-size: 14px; font-weight: bold; padding: 5px;"
+);
+
 // =====================================================
 //  Config-Driven Page Visibility
 //  Edit src/site.config.js to show/hide pages.
