@@ -29,6 +29,25 @@ console.log(
   });
 })();
 
+// =====================================================
+//  Config-Driven Component Visibility
+// =====================================================
+(function applyComponentVisibility() {
+  const components = siteConfig.components;
+  if (!components) return;
+  Object.keys(components).forEach(compKey => {
+    const comp = components[compKey];
+    const elements = document.querySelectorAll(`[data-component="${compKey}"]`);
+    elements.forEach(el => {
+      if (!comp.enabled) {
+        el.style.display = 'none';
+      } else {
+        el.style.display = '';
+      }
+    });
+  });
+})();
+
 // Navbar Scroll Effect
 const navbar = document.getElementById('navbar');
 if (navbar) {

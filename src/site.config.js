@@ -28,4 +28,9 @@ export const siteConfig = {
       href: 'gallery.html',
     },
   },
+  components: {
+    customerFeedbacks: {
+      enabled: true,              // Set to false to hide customer feedback sections
+    }
+  }
 };
